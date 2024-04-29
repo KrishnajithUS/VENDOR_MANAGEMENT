@@ -62,7 +62,7 @@ python3 --version
 This should output the version number of Python that you just installed.
 
 ## Setup Project
-1. Clone the resporitory: `git clone `
+1. Clone the resporitory: `git clone https://github.com/KrishnajithUS/VENDOR_MANAGEMENT.git`
 2. Change current directory to `VENDOR_MANAGEMENT` folder:`cd VENDOR_MANAGEMENT`
 3. Create a virutal evrironment:
 
