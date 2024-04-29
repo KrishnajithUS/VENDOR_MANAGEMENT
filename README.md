@@ -86,7 +86,7 @@ This will activate the virtual environment and you should see the name of the en
 ```bash
  env/Scripts/activate.bat //In CMD
  env/Scripts/Activate.ps1 //In Powershel
-
+```
 4. Install all backend dependencies with pipenv: `pip install requirements.txt`.
 5. Run `python3 manage.py makemigrations` & `python3 manage.py migrate`.
 6. Run Server : `python3 manage.py runserver`
