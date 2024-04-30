@@ -165,3 +165,23 @@ class VendorManagementSystemTestCase(TestCase):
         url = f"/api/purchase_orders/{po_number}/"
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+
+    def test_vendor_acknowledge(self):
+        # Test POST /purchase_orders/{po_number}/acknowledge/ endpoint
+        obj = self.create_purchase_order()
+        po_number = obj.pk
+        data = {
+             "acknowledgment_date": "2024-04-03"
+        }
+        url = f"/api/purchase_orders/{po_number}/acknowledge/"
+        response = self.client.post(url, data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    def test_vendor_performance(self):
+        # Test GET /vendors/{vendor_code}/acknowledge/ endpoint
+        obj = self.create_vendor()
+        vendor_code = obj.pk
+        url = f"/api/vendors/{vendor_code}/performance/"
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
