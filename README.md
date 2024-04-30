@@ -94,7 +94,13 @@ This will activate the virtual environment and you should see the name of the en
    ```bash
    python manage.py createsuperuser
    ```
-   
+
+# Run Test Suit
+
+   ```bash
+   python manage.py test
+   ```
+
 # API Docs
 
 ## Introduction
