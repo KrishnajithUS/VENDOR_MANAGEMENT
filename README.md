@@ -370,6 +370,7 @@ Any dates in request body must be `yyyy-mm-dd` format.
 
 - **Description:**  Retrieve a vendor's performance metrics.
 - **Permissions:** Authenticated users only.
+- **Info:** on_time_delivery_rate calculated on the basis of expected_delivery_date & actual_delivery_date
 - **Response Format:**
   ```json
     {
@@ -385,7 +386,7 @@ Any dates in request body must be `yyyy-mm-dd` format.
 
 ###  Vendor Update Acknowledgment
 
-#### `GET /purchase_orders/{po_number}/acknowledge/`
+#### `POST /purchase_orders/{po_number}/acknowledge/`
 
 - **Description:**  Vendors to acknowledge POs.
 - **Permissions:** Authenticated users only.
